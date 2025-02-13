@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="loading">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta name="description" content="Student Project Sentimental Analysis">
+    <meta name="keywords" content=" Student Project - Sentimental Analysis">
+    <meta name="author" content="Code Snypers">
+    <title>Student Project|Sentimental Analysis</title>
+        <title>Login Page|Sentimental Analysis</title>
+        <link rel="apple-touch-icon" sizes="60x60" href="app-assets/img/ico/apple-icon-60.html">
+        <link rel="apple-touch-icon" sizes="76x76" href="app-assets/img/ico/apple-icon-76.html">
+        <link rel="apple-touch-icon" sizes="120x120" href="app-assets/img/ico/apple-icon-120.html">
+        <link rel="apple-touch-icon" sizes="152x152" href="app-assets/img/ico/apple-icon-152.html">
+        <!--link rel="shortcut icon" type="image/x-icon" href="app-assets/img/ico/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="app-assets/img/ico/favicon-32.png"-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="app-assets/fonts/feather/style.min.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/fonts/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/perfect-scrollbar.min.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/prism.min.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/sweetalert2/css/sweetalert2.min.css">
+    </head>
+    <body data-col="1-column" class=" 1-column  blank-page blank-page"  ng-app="postLogin" ng-controller="PostController as postCtrl">
+        <!-- ////////////////////////////////////////////////////////////////////////////-->
+        <div class="wrapper nav-collapsed menu-collapsed">
+            <div class="main-panel">
+                <div class="main-content">
+                    <div class="content-wrapper"><!--Login Page Starts-->
+                        <section id="login">
+                            <div class="container-fluid">
+                                <div class="row full-height-vh">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="card gradient-indigo-purple text-center width-400">
+                                            
+                                            <div class="card-body">
+                                                <div class="card-block">
+                                                    <h2 class="white">Login</h2>
+                                                    <form name="login" ng-submit="postCtrl.postForm()"  method="POST">
+                                                        <div class="form-group">
+                                                            <div class="col-md-12">
+                                                                <input type="text" class="form-control" ng-model="postCtrl.inputData.username" name="inputUsername" id="inputUsername" placeholder="Username" autofocus required >
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-md-12">
+                                                                <input type="password" class="form-control" ng-model="postCtrl.inputData.password" name="inputPassword" id="inputPassword" placeholder="Password" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-danger" ng-show="errorMsg">
+                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                                                ×</button>
+                                                            <span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;{{errorMsg}}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-md-12">
+                                                                <button type="submit" class="btn btn-pink btn-block btn-raised" ng-disabled="login.$invalid">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Login Page Ends-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="app-assets/vendors/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="app-assets/vendors/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="app-assets/vendors/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="app-assets/vendors/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+        <script src="app-assets/vendors/js/prism.min.js" type="text/javascript"></script>
+        <script src="app-assets/vendors/js/jquery.matchHeight-min.js" type="text/javascript"></script>
+        <script src="app-assets/vendors/js/screenfull.min.js" type="text/javascript"></script>
+        <script src="app-assets/vendors/js/pace/pace.min.js" type="text/javascript"></script>
+        <script src="app-assets/js/app-sidebar.js" type="text/javascript"></script>
+        <script src="app-assets/js/notification-sidebar.js" type="text/javascript"></script>
+        <script src="app-assets/js/customizer.js" type="text/javascript"></script>
+        <script src="app-assets/sweetalert2/js/sweetalert2.all.min.js" type="text/javascript"></script>
+        <script src="app-assets/sweetalert2/js/sweetalert2.min.js" type="text/javascript"></script>
+       <script>
+        var session = localStorage.getItem('session_id');
+        if (session === '1') {
+            window.location.href = 'file_upload.php?value='+session;
+        } else if (session >= '2' && session <= '10000'){
+         window.location.href = 'file_view.php';
+        }
+        else {
+            angular.module('postLogin', []).controller('PostController', ['$scope', '$http', function ($scope, $http) {
+                            this.postForm = function () {
+                                var encodedString = 'username=' +
+                                        encodeURIComponent(this.inputData.username) +
+                                        '&password=' +
+                                        encodeURIComponent(this.inputData.password);
+                                $http({
+                                    method: 'POST',
+                                    url: 'login.php',
+                                    data: encodedString,
+                                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                                }).success(function (data) {
+                                           if (data.status === 'correct') {
+                                              //  localStorage.setItem('session_username', data.username);
+                                              //  localStorage.setItem('session_id', data.user_id);
+                                              // if (data.user_id === '1') {
+                                                 window.location.href = 'file_view.php?value=1';
+                                                // } else {
+                                                // window.location.href = 'file_view.php?value= '+data.user_id;
+                                               //   }
+                                               
+                                            } else {
+                                                swal.fire({
+                                                title: "WRONG!",
+                                                text: "Username and password did not match",
+                                                type: "error",
+                                                timer: 5000
+                                                });
+                                               // $scope.errorMsg = "Username and password do not match.";
+                                            }
+                                        })
+                            }
+                        }]);
+        }
+        </script>
+    </body>
+
+</html>
