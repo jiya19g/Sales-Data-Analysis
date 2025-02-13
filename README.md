@@ -1,15 +1,6 @@
-# Twitter Clone
+# SDA
 
-A twitter clone with basic functionality like tweet, like tweet, following system etc.
-
-## Development
-Built with vanilla javascript, myql and [Boss PHP mini Framework](https://github.com/techreagan/Boss)
-
-## Screenshot
-![Screenshot](public/img/Twitter-Screenshot-home.png)
-![Screenshot](public/img/Twitter-Screenshot-1.png)
-![Screenshot](public/img/Twitter-Screenshot-2.png)
-![Screenshot](public/img/Twitter-Screenshot-3.png)
+A platform is developed where users can add products and submit reviews. The sentiment polarity of each review is classified as positive, negative, or neutral. The data is then mined using MATLAB, incorporating blockchain technology for secure storage and verification. Finally, the results are visualized in MATLAB to provide insights into review trends and sentiment distribution.
 
 ## Installation
 Import the twitter.sql to your mysql database 
